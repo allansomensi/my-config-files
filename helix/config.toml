@@ -1,0 +1,26 @@
+theme = "autumn"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[keys.insert]
+C-s = ":w"
+
+[keys.normal]
+C-s = ":w"
+C-space = "hover"
+"#" = "toggle_comments"
+F1 = ":character-info"
+F5 = ":run-shell-command alacritty -e bash -c 'cargo run; read -n 1'"
+
+[keys.normal."+"]
+r = ":run-shell-command alacritty -e bash -c 'cargo run; read'"
+b = ":run-shell-command alacritty -e bash -c 'cargo build; sleep 0.5'"
+t = ":run-shell-command alacritty -e bash -c 'cargo test; read'"
